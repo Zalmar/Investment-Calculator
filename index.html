@@ -8,6 +8,67 @@
     <title>Investment Calculator</title>
 </head>
 <body>
+    <main>
+        <section class="left-section">
+            <h1>Калькулятор <br>доходности портфеля</h1>
+            <div class="money">
+                <p>Сумма</p>
+                <div class="rub">
+                    <span id="rangeMoney"></span> 
+                    ₽
+                </div>
+                <div class="input_tab">
+                    <input id="money" type="range" min="10000" max="10000000" step="10000" value="1200000" oninput="getValues()">
+                </div>
+            </div>
+        
+            <div class="term">
+                <p>Срок</p>
+                <div class="mounths">
+                    <span id="rangeMonths"></span> 
+                    мес.
+                </div>
+                <div class="input_tab">
+                    <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getValues()">
+                </div>
+            </div>
+
+            <div class="radio-buttons">
+                <ul>
+                    <li class="radio"><label>Консервативный<input name="radio-buttons" value="9" type="radio" class="radio-input" checked onclick="getValues();"></label></li>
+                    <li class="radio"><label>Сбалансированный<input name="radio-buttons" value="18" type="radio" class="radio-input" onclick="getValues();"></label></li>
+                    <li class="radio"><label>Рискованный<input name="radio-buttons" value="25" type="radio" class="radio-input" onclick="getValues();"></label></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="left-column">
+                <div class="summa">
+                    +
+                    <span id="left-profit"></span> 
+                    ₽
+                    <p>6.5 % годовых</p>
+                </div>
+                <div class="left-chart">
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="summa">
+                    <span id="right-profit">100000</span> 
+                    ₽
+                    <p><span id="pros"></span> % годовых</p>
+                </div>
+                <div class="right-chart">
+                </div>
+            </div>
+
+            <div class="btn">
+                <button>Инвестировать</button>
+            </div>
+            
+        </section>
+    </main>
     <script src="js/main.js"></script>
 </body>
 </html>

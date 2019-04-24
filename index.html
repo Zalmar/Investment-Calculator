@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="css/input.css">
+    <title>Калькулятор доходности</title>
 </head>
 <body>
     <main>
@@ -17,8 +18,8 @@
                     <span id="rangeMoney"></span> 
                     ₽
                 </div>
-                <div class="input_tab">
-                    <input id="money" type="range" min="10000" max="10000000" step="10000" value="1200000" oninput="getValues()">
+                <div class="input_container">
+                    <input id="money" type="range" min="1000" max="10000000" step="1000" value="1200000" oninput="getValues()">
                 </div>
             </div>
         
@@ -28,7 +29,7 @@
                     <span id="rangeMonths"></span> 
                     мес.
                 </div>
-                <div class="input_tab">
+                <div class="input_container">
                     <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getValues()">
                 </div>
             </div>
@@ -44,35 +45,30 @@
 
         <section class="right-section">
             <div class="left-column">
-                <div class="summa">+
-                    <span id="left-profit"></span> ₽
+                <div class="summa">
+                    <span>
+                        +<span id="left-profit"></span> ₽
+                    </span>
                     <p>6.5 % годовых</p>
                 </div>
-                <div class="cylinder">
-                    <div class="top"></div>
-                    <div class="mid"></div>
-                    <div class="bottom"></div>
-                    <div class="path"></div>
-                </div>
+                <div id="lc" class="left-cylinder"></div>
+                <div class="l-bottom"></div>
+                <div class="l-path"></div>
             </div>
             <div class="right-column">
-                <div class="summa">+
-                    <span id="right-profit"></span> ₽
+                <div class="summa">
+                    <span>
+                        +<span id="right-profit"></span> ₽
+                    </span>
                     <p><span id="pros"></span> % годовых</p>
                 </div>
-                <div class="cylinder">
-                    <div class="top"></div>
-                    <div class="mid"></div>
-                    <div class="bottom"></div>
-                    <div class="path"></div>
-                </div>
+                <div class="right-cylinder"></div>
+                <div class="r-bottom"></div>
+                <div class="r-path"></div>
             </div>
 
-            <div class="btn">
-                <button>Инвестировать</button>
-            </div>
-            
         </section>
+        <button class="button" type="submit">Инвестировать</button>
     </main>
     <script src="js/main.js"></script>
 </body>

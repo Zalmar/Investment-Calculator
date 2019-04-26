@@ -1,7 +1,42 @@
+@font-face {
+	font-family: 'Circe';
+	src: url('../fonts/Circe/Circe-Regular.eot');
+	src: local('Circe'), local('Circe-Regular'),
+		url('../fonts/Circe/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe/Circe-Regular.woff') format('woff'),
+		url('../fonts/Circe/Circe-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circe';
+	src: url('../fonts/Circe/Circe-Bold.eot');
+	src: local('Circe Bold'), local('Circe-Bold'),
+		url('../fonts/Circe/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe/Circe-Bold.woff') format('woff'),
+		url('../fonts/Circe/Circe-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Circe';
 }
 
 main {
@@ -36,7 +71,7 @@ main {
 h1 {
     margin-top: 50px;
 
-    font-family: GothamPro;
+    font-family: 'Gotham Pro';
     font-size: 25px;
     font-weight: bold;
     font-style: normal;
@@ -51,7 +86,6 @@ h1 {
     margin-top: 47px;
 
     opacity: 0.6;
-    font-family: Circe;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -63,7 +97,6 @@ h1 {
 }
 
 .left-section span,.rub, .mounths {
-    font-family: Circe;
     font-size: 20px;
     font-weight: bold;
     font-style: normal;
@@ -81,6 +114,15 @@ h1 {
 
 .radio label {
     margin-left: 35px;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333333;
 }
 
 .radio {
@@ -91,16 +133,6 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    font-family: Circe;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.44;
-    letter-spacing: normal;
-    text-align: left;
-    color: #333333;
 }
 /* Hide the browser's default radio button */
 .radio input {
@@ -119,9 +151,9 @@ h1 {
     border: solid 0.5px rgba(51, 51, 51, 0.3);
     background-color: #ffffff;
 }
-  
+
 /* On mouse-over, add a grey background color */
-.radio:hover input ~ .checkmark {
+.radio label:hover input ~ .checkmark {
     background-color: #4bd1a0;
 }
   
@@ -205,7 +237,6 @@ h1 {
 }
 
 .summa{
-    font-family: Circe;
     font-size: 25px;
     font-weight: bold;
     font-style: normal;
@@ -219,9 +250,9 @@ h1 {
 .summa p {
     height: 23px;
     opacity: 0.6;
-    font-family: Circe;
+
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.44;
@@ -234,7 +265,7 @@ h1 {
     display: block;
     position: relative;
 	width: 137px;
-	height: 195px;
+	height: 199px;
 	border-radius: 76px/25px;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12);
     background-color: #3ba67f;
@@ -312,9 +343,6 @@ h1 {
 
 .bottom-text {
     margin-top: 18px;
-    /* padding-left: 40px; */
-    text-align: center;
-    font-family: Circe;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -326,7 +354,7 @@ h1 {
 }
 
 .bottom-text span {
-    padding: 6px 12px;
+    padding: 1px 9px;
     margin-left: 10px;
     /* background: #333333; */
     border-radius: 50%;
@@ -348,7 +376,6 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(245, 81, 81, 0.8);
     background-color: #f55151;
     
-    font-family: Circe;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;

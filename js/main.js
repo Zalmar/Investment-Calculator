@@ -45,4 +45,14 @@ function calcProfit (deposit, pers, term) {
   return Math.round(deposit * (1 + (pers / 100) / 12) ** term) - deposit
 }
 
+function popupShow() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+function popupRemove(){
+  var popup = document.getElementById("myPopup");
+  popup.classList.remove("show")
+}
+
 getValues();

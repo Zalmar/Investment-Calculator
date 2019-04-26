@@ -25,11 +25,15 @@ function getValues() {
   let leftCylinder = document.getElementById("lc");
   let rightCylinder = document.getElementById("rc");
 
-  let delta = (rightProfit - leftProfit) / leftProfit  
-  console.log(delta)
+  let deltaProfit = (rightProfit - leftProfit) / rightProfit
+  let leftCylinderHeight = 143 - ((143 * deltaProfit))
 
-  leftCylinder.style.height = 199 - (199 * delta) + 'px';
+  let deltaTerm = (60 - term) / 60
+  leftCylinder.style.height = leftCylinderHeight - (leftCylinderHeight * deltaTerm) + 46  + 'px';
   leftCylinder.style.transitionDuration = "0.5s";
+
+  rightCylinder.style.height = 143 - (143 * deltaTerm) + 46 + 'px'
+  rightCylinder.style.transitionDuration = "0.5s";
 
   let moneySlider = document.getElementById("money");
   moneySlider.style.background = 'linear-gradient(to right, #4bd1a0 0%, #4bd1a0 '+moneySlider.value / 100000 +'%, #e6e6e6 ' + moneySlider.value / 100000 + '%, #e6e6e6 100%)'

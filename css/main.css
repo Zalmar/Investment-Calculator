@@ -208,8 +208,6 @@ h1 {
 .left-column {
     margin-bottom: 84px;
     margin-left: 153px;
-    /* display: grid; */
-    /* justify-content: start; */
 
 
     /* border: 1px solid red; */
@@ -219,11 +217,8 @@ h1 {
 .right-column {
     margin-bottom: 84px;
     padding-left: 30px;
-    margin-right: 120px;
-    /* display: grid; */
-    /* justify-content: end; */
+    margin-right: 110px;
 
-    /* border: 1px solid red; */
 }
 
 .wrapper_r-cylinter {
@@ -354,7 +349,7 @@ h1 {
 }
 
 .bottom-text span {
-    padding: 1px 9px;
+    padding: 3px 10px 1px 10px;
     margin-left: 10px;
     /* background: #333333; */
     border-radius: 50%;

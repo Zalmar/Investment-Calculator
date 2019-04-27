@@ -26,13 +26,13 @@ function getValues() {
   let rightCylinder = document.getElementById("rc");
 
   let deltaProfit = (rightProfit - leftProfit) / rightProfit
-  let leftCylinderHeight = 143 - ((143 * deltaProfit))
+  let leftCylinderHeight = 153 - ((153 * deltaProfit))
 
   let deltaTerm = (60 - term) / 60
   leftCylinder.style.height = leftCylinderHeight - (leftCylinderHeight * deltaTerm) + 46  + 'px';
   leftCylinder.style.transitionDuration = "0.5s";
 
-  rightCylinder.style.height = 143 - (143 * deltaTerm) + 46 + 'px'
+  rightCylinder.style.height = 153 - (149 * deltaTerm) + 46 + 'px'
   rightCylinder.style.transitionDuration = "0.5s";
 
   let moneySlider = document.getElementById("money");
@@ -43,6 +43,16 @@ function getValues() {
 
 function calcProfit (deposit, pers, term) {
   return Math.round(deposit * (1 + (pers / 100) / 12) ** term) - deposit
+}
+
+function popupShow() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+function popupRemove(){
+  var popup = document.getElementById("myPopup");
+  popup.classList.remove("show")
 }
 
 getValues();

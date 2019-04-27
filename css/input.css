@@ -1,6 +1,6 @@
 /* for chrome */
 .input_container {
-    margin-top: 8px;
+    margin-top: 2px;
 }
 input[type=range] {
     -webkit-appearance: none;

@@ -1,0 +1,361 @@
+@media screen and (max-width: 1024px) {
+    main {
+        margin: 0px;
+        padding: 0px;
+
+        width: 1024px;
+        height: 690px;
+
+        display: grid;
+        align-items: center;
+    }
+
+    .left-section {
+        margin-top: 52px;
+        margin-left: 30px;
+
+        width: 389px;
+        height: 557px;
+    }
+
+    .right-section {
+        margin-top: 72px;
+        margin-right: 31px;
+        margin-left: 360px;
+
+        width: 633px;
+        height: 517px;
+        grid-template-columns:  55% 45%;
+    }
+
+    .left-column {
+        padding-left: 35px;
+    }
+
+    .right-column {
+        margin-right: 0px;
+        padding-left: 20px;
+    }
+
+    .button {
+        left: 613px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        margin: 0px;
+        padding: 0px;
+
+        width: 768px;
+        height: 607px;
+    }
+
+    h1 {
+        margin-top: 34px;
+        line-height: 1.2;
+        font-size: 20px;
+    }
+    
+    .left-section {
+        margin-top: 39px;
+        margin-left: 28px;
+        padding-left: 30px;
+
+        width: 346px;
+        height: 493px;
+    }
+
+    .money {
+        margin-top: 30px;
+        
+    }
+    .term {
+        margin-top: 27px;
+    }
+
+    .radio-buttons {
+        margin-top: 36px;
+    }
+
+    input[type=range] {
+        width: 286px;
+    }
+
+    .right-section {
+        margin-top: 40px;
+        /* margin-right: 20px; */
+
+
+        width: 374px;
+        height: 469px;
+    }
+
+    .left-column {
+        margin-bottom: 80px;
+        padding-left: 45px;
+        margin-left: 0px;
+
+        /* border: 1px solid red; */
+
+    }
+
+    .right-column {
+        margin-bottom: 80px;
+        padding: 0;
+    }
+
+    .left-cylinder, .right-cylinder {
+        width: 126.5px;
+        height: 42.5px;
+        max-height: 175px;
+    }
+
+    .left-cylinder:before {
+        width: 126.5px;
+        height: 42.5px;
+
+    }
+    .right-cylinder:before {
+        width: 126.5px;
+        height: 42.5px;
+
+    }
+
+    .summa{
+        padding-left: 2px;
+        font-size: 23px;
+    }
+
+    .summa p {
+        font-size: 14px;
+    }
+
+    .wrapper_r-cylinter {
+        margin-top: -20px;
+        /* border: 1px solid red; */
+    
+    }
+    .wrapper_l-cylinter {
+        margin-top: -20px;
+        /* border: 1px solid red; */
+    }
+
+    .l-bottom, .r-bottom {
+        width: 126.5px;
+        
+    }
+    .l-bottom:before{
+        width: 126.5px;
+    }
+    .r-bottom:before{
+        width: 126.5px;
+    }
+
+    .button {
+        left: 465px
+    }
+
+    .popup .popuptext {
+        font-size: 16px;
+        width: 350px;
+        margin-left: -86px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    main {
+        margin: 0px;
+        padding: 0px;
+
+        width: 320px;
+        height: 882px;
+
+    }
+    .left-section {
+        margin: 46px 24px 0px 24px;
+        padding: 20px;
+
+        width: 272px;
+        height: 386px;
+    }
+
+    h1 {
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 0px;
+    }
+
+    input[type=range] {
+        width: 232px;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        width: 25px;
+        height: 25px;
+        border: solid 6px #fff;
+    }
+
+    .money {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .money p {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .rub {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+    }
+
+    .rub span {
+        padding-right: 5px;
+    }
+    
+    .money .rub {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .term {
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .term p {
+        font-size: 14px;
+    
+    }
+
+    .mounths {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end; 
+    }
+    .mounths span{
+        padding-right: 5px;
+    }
+        
+
+    .right-section {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: end;
+        justify-content: center;
+
+        margin: 356px 39px 120px 39px;
+
+        
+        padding: 0px;
+
+        width: 242px;
+        height: 406px;
+    }
+
+    .left-column {
+        /* padding: 0; */
+        /* margin: 0; */
+        margin-bottom: 60px;
+        padding-left: 20px;
+    }
+
+    .right-column {
+        margin-bottom: 60px;
+        /* padding: 0; */
+        padding-left: 10px;
+        /* margin-left: 0; */
+        /* margin-right: 5px; */
+    
+        /* border: 1px solid red; */
+    }
+
+    .left-cylinder, .right-cylinder {
+        /* margin: 0; */
+        width: 73.9px;
+        height: 120.9px;
+        max-height: 105px;
+    }
+    .left-cylinder:before {
+        width: 73.9px;
+        height: 24.8px;
+
+    }
+    .right-cylinder:before {
+        width: 73.9px;
+        height: 24.8px;
+
+    }
+
+    .wrapper_r-cylinter {
+        /* margin-top: -25px; */
+        padding-left: 5px;
+        /* border: 1px solid red; */
+    
+    }
+    .wrapper_l-cylinter {
+        padding-left: 15px;
+        margin-top: -25px;
+        /* border: 1px solid red; */
+    }
+
+    .l-bottom, .r-bottom {
+        margin-top: 16px;
+        width: 73.9px;
+        height: 37px;
+        
+    }
+    .l-bottom:before{
+        width: 73.9px;
+        height: 24.8px;
+    }
+    .r-bottom:before{
+        width: 73.9px;
+        height: 24.8px;
+    }
+
+    .summa{
+        padding-left: 2px;
+        font-size: 17px;
+    }
+
+    .summa p {
+        font-size: 14px;
+    }
+
+    .bottom-text {
+        padding: 0;
+        margin-top: 32px;
+        margin-left: 10px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .bottom-text #pop {
+        margin-left: 5px;
+    }
+
+
+    .button {
+        width: 209px;
+        height: 60px;
+        font-size: 16px;
+        top: -150px;
+        left: 56px;
+    }
+    .popup .popuptext {
+        font-size: 14px;
+        width: 270px;
+        margin-left: -59px;
+    }
+}

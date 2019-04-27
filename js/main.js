@@ -25,14 +25,23 @@ function getValues() {
   let leftCylinder = document.getElementById("lc");
   let rightCylinder = document.getElementById("rc");
 
+
+
+  let element = document.getElementById('lc'),
+  style = window.getComputedStyle(element),
+  max_height = style.getPropertyValue('max-height').slice(0,3);
+  max_height = max_height - 42.5
+  
+  max_h_bottom = style.getPropertyValue('max-height').slice(0,2);
+
   let deltaProfit = (rightProfit - leftProfit) / rightProfit
-  let leftCylinderHeight = 153 - ((153 * deltaProfit))
+  let leftCylinderHeight = max_height - ((max_height * deltaProfit))
 
   let deltaTerm = (60 - term) / 60
   leftCylinder.style.height = leftCylinderHeight - (leftCylinderHeight * deltaTerm) + 46  + 'px';
   leftCylinder.style.transitionDuration = "0.5s";
 
-  rightCylinder.style.height = 153 - (149 * deltaTerm) + 46 + 'px'
+  rightCylinder.style.height = max_height - (max_height * deltaTerm) + 50 + 'px'
   rightCylinder.style.transitionDuration = "0.5s";
 
   let moneySlider = document.getElementById("money");

@@ -1,8 +1,8 @@
 function getValues() {
 
-  let deposit = parseInt(document.getElementById("money").value)
-  let term = parseInt(document.getElementById("mounths").value)
-
+  let deposit = parseInt(document.getElementById("money").value);
+  let term = parseInt(document.getElementById("mounths").value);
+  
   let radioBtns = document.getElementsByName("radio-buttons")
   for(let i = 0; i < radioBtns.length; i++){
     if(radioBtns[i].checked){
@@ -13,8 +13,11 @@ function getValues() {
   
   document.getElementById("rangeMoney").innerHTML = deposit.toLocaleString();
   document.getElementById("rangeMonths").innerHTML = term;
-  
-  //расчет суммы профита 
+
+  document.getElementById("modalSumma").innerHTML = deposit.toLocaleString();
+  document.getElementById("modalTerm").innerHTML = term.toLocaleString();
+  document.getElementById("modalPercent").innerHTML = checkBtn;
+
   let leftProfit = calcProfit(deposit, 6.5, term);
   let rightProfit = calcProfit(deposit, checkBtn, term);
 
@@ -24,8 +27,6 @@ function getValues() {
   // получение столбцов
   let leftCylinder = document.getElementById("lc");
   let rightCylinder = document.getElementById("rc");
-
-
 
   let element = document.getElementById('lc'),
   style = window.getComputedStyle(element),

@@ -93,8 +93,26 @@
                 </div>
             </div>
         </section>
-        <button class="button" type="submit">Инвестировать</button>
+        <button id="btn" class="button" type="submit">Инвестировать</button>
+        <div id="myModal" class="modal">
+            <!-- Modal window -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2></h2>
+                </div>
+                <div class="modal-body">
+                    <p>Вы успешно инвестировали </p>
+                    <span id="modalSumma"></span> руб.
+                    под <span id="modalPercent"></span> % годовых
+                    <p>на срок <span id="modalTerm"></span> мес.</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

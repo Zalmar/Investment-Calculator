@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
     <title>Калькулятор доходности</title>
 </head>
 <body>
     <main>
         <section class="left-section">
-            <h1>Калькулятор <br>доходности портфеля</h1>
-            <div class="money">
+            <h1>Калькулятор <br/>доходности портфеля</h1>
+            <div class="deposit">
                 <p>Сумма</p>
-                <div class="rub">
+                <div class="sum-deposit">
                     <span id="rangeMoney"></span>
                     ₽
                 </div>
-                <div class="input_container">
-                    <input id="money" type="range" min="1000" max="10000000" step="1000" value="1200000"
-                        oninput="getValues()">
+                <div class="input-container">
+                    <input id="money" type="range" min="1000" max="10000000" step="1000" value="1200000" oninput="getValues()"/>
                 </div>
             </div>
             <div class="term">
                 <p>Срок</p>
                 <div class="mounths">
-                    <span id="rangeMonths"></span>
+                    <span id="rangeMounths"></span>
                     мес.
                 </div>
-                <div class="input_container">
-                    <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getValues()">
+                <div class="input-container">
+                    <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getValues()"/>
                 </div>
             </div>
             <div class="radio-buttons">
                 <ul>
                     <li class="radio">
                         <label>Консервативный
-                            <input name="radio-buttons" value="9" type="radio" class="radio-input" checked
-                                onclick="getValues();">
+                            <input name="radio-buttons" value="9" type="radio" class="radio-input" checked onclick="getValues()"/>
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="radio">
                         <label>Сбалансированный
-                            <input name="radio-buttons" value="18" type="radio" class="radio-input"
-                                onclick="getValues();">
+                            <input name="radio-buttons" value="18" type="radio" class="radio-input" onclick="getValues()" />
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="radio">
                         <label>Рискованный
-                            <input name="radio-buttons" value="25" type="radio" class="radio-input"
-                                onclick="getValues();">
+                            <input name="radio-buttons" value="25" type="radio" class="radio-input" onclick="getValues()"/>
                             <span class="checkmark"></span>
                         </label>
                     </li>
@@ -61,32 +57,33 @@
         </section>
         <section class="right-section">
             <div class="left-column">
-                <div class="summa">
-                    +<span id="left-profit"></span> ₽
+                <div class="profit">
+                    +<span id="leftProfit"></span> ₽
                     <p>6.5 % годовых</p>
                 </div>
-                <div class="wrapper_l-cylinter">
-                    <div id="lc" class="left-cylinder">
-                    </div>
-                    <div class="l-bottom">
-                    </div>
+                <div class="wrapper-left-cylinter">
+                    <div id="leftCylinder" class="left-cylinder"></div>
+                    <div class="left-bottom"></div>
                 </div>
                 <div class="bottom-text">
                     <div class="popup">
-                        <p>Депозит <span id="pop" onmouseenter="popupShow()" onmouseleave="popupRemove()">?</span></p>
-                        <span class="popuptext" id="myPopup">Депозит — это банковский вклад, который размещается в банке
-                            на заранее оговоренных договором условиях хранения и начисления процентов.</span>
+                        <p>Депозит
+                            <span id="popUp" onmouseenter="popupShow()" onmouseleave="popupHide()">?</span>
+                        </p>
+                        <!-- PopUp window -->
+                        <span class="popup-text" id="myPopup">Депозит — это банковский вклад, который размещается в банке
+                            назаранее оговоренных договором условиях хранения и начисленияпроцентов.</span>
                     </div>
                 </div>
             </div>
             <div class="right-column">
-                <div class="summa">
-                    +<span id="right-profit"></span> ₽
-                    <p><span id="pers"></span> % годовых</p>
+                <div class="profit">
+                    +<span id="rightProfit"></span> ₽
+                    <p><span id="perc"></span> % годовых</p>
                 </div>
-                <div class="wrapper_r-cylinter">
-                    <div id="rc" class="right-cylinder"></div>
-                    <div class="r-bottom"></div>
+                <div class="wrapper-right-cylinter">
+                    <div id="rightCylinder" class="right-cylinder"></div>
+                    <div class="right-bottom"></div>
                 </div>
                 <div class="bottom-text">
                     <p>Город Денег</p>
@@ -94,21 +91,19 @@
             </div>
         </section>
         <button id="btn" class="button" type="submit">Инвестировать</button>
-        <div id="myModal" class="modal">
-            <!-- Modal window -->
+        <!-- Modal window -->
+        <div id="modalWindow" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h2></h2>
                 </div>
                 <div class="modal-body">
-                    <p>Вы успешно инвестировали </p>
-                    <span id="modalSumma"></span> руб.
-                    под <span id="modalPercent"></span> % годовых
+                    <p>Вы успешно инвестировали</p>
+                    <span id="modalSumma"></span> руб. под
+                    <span id="modalPercent"></span> % годовых
                     <p>на срок <span id="modalTerm"></span> мес.</p>
                 </div>
-                <div class="modal-footer">
-                </div>
+                <div class="modal-footer"></div>
             </div>
         </div>
     </main>

@@ -1,4 +1,4 @@
-function getValues() {
+function getSetValues() {
     // get the deposit and term from input range
     let deposit = parseInt(document.getElementById("money").value);
     let term = parseInt(document.getElementById("mounths").value);
@@ -12,7 +12,7 @@ function getValues() {
         }
     }
 
-    // set deposit and term in <span>
+    // set deposit and term
     document.getElementById("rangeMoney").innerHTML = deposit.toLocaleString();
     document.getElementById("rangeMounths").innerHTML = term;
     
@@ -57,7 +57,7 @@ function getValues() {
     // let ratioTerm = (60 - term) / 60;
 
     // ratio deposit calculation. Cylinder height depends on the amount of the deposit
-    let ratioTerm = (10000000 - deposit) / 10000000;
+    let ratioTerm = (5000000 - deposit) / 5000000;
 
     // set the height cylinders and duration animations
     leftCylinder.style.height = leftCylinderHeight - (leftCylinderHeight * ratioTerm) + bottomHeight  + 'px';
@@ -68,7 +68,7 @@ function getValues() {
     
     // input range progress bar
     let moneySlider = document.getElementById("money");
-    moneySlider.style.background = 'linear-gradient(to right, #4bd1a0 0%, #4bd1a0 '+moneySlider.value / 100000 +'%, #e6e6e6 ' + moneySlider.value / 100000 + '%, #e6e6e6 100%)';
+    moneySlider.style.background = 'linear-gradient(to right, #4bd1a0 0%, #4bd1a0 '+moneySlider.value / 50000 +'%, #e6e6e6 ' + moneySlider.value / 50000 + '%, #e6e6e6 100%)';
     
     let mounthsSlider = document.getElementById("mounths");
     mounthsSlider.style.background = 'linear-gradient(to right, #4bd1a0 0%, #4bd1a0 '+ mounthsSlider.value * 1.6 +'%, #e6e6e6 ' + mounthsSlider.value * 1.6 + '%, #e6e6e6 100%)';
@@ -92,4 +92,4 @@ function popupHide(){
 }
 
 // call function in start
-getValues();
+getSetValues();

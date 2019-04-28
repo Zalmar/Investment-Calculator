@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/animation.css"/>
     <link rel="stylesheet" href="css/media.css"/>
     <title>Калькулятор доходности</title>
 </head>
@@ -19,7 +20,7 @@
                     ₽
                 </div>
                 <div class="input-container">
-                    <input id="money" type="range" min="1000" max="10000000" step="1000" value="1200000" oninput="getValues()"/>
+                    <input id="money" type="range" min="1000" max="5000000" step="1000" value="1200000" oninput="getSetValues()"/>
                 </div>
             </div>
             <div class="term">
@@ -29,26 +30,26 @@
                     мес.
                 </div>
                 <div class="input-container">
-                    <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getValues()"/>
+                    <input id="mounths" type="range" min="1" max="60" step="1" value="24" oninput="getSetValues()"/>
                 </div>
             </div>
             <div class="radio-buttons">
                 <ul>
                     <li class="radio">
                         <label>Консервативный
-                            <input name="radio-buttons" value="9" type="radio" class="radio-input" checked onclick="getValues()"/>
+                            <input name="radio-buttons" value="9" type="radio" class="radio-input" checked onclick="getSetValues()"/>
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="radio">
                         <label>Сбалансированный
-                            <input name="radio-buttons" value="18" type="radio" class="radio-input" onclick="getValues()" />
+                            <input name="radio-buttons" value="18" type="radio" class="radio-input" onclick="getSetValues()" />
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="radio">
                         <label>Рискованный
-                            <input name="radio-buttons" value="25" type="radio" class="radio-input" onclick="getValues()"/>
+                            <input name="radio-buttons" value="25" type="radio" class="radio-input" onclick="getSetValues()"/>
                             <span class="checkmark"></span>
                         </label>
                     </li>
@@ -90,7 +91,9 @@
                 </div>
             </div>
         </section>
-        <button id="btn" class="button" type="submit">Инвестировать</button>
+        <div class="button-container">
+            <button id="btn" class="button" type="submit">Инвестировать</button>
+        </div>
         <!-- Modal window -->
         <div id="modalWindow" class="modal">
             <div class="modal-content">

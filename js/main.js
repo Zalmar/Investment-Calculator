@@ -81,13 +81,13 @@ function calcProfit (deposit, perc, term) {
 
 function popupShow() {
     // show popup window
-    let popup = document.getElementById("myPopup");
+    let popup = document.getElementById("popUpWindow");
     popup.classList.toggle("show");
 }
 
 function popupHide(){
     // hide popup window
-    let popup = document.getElementById("myPopup");
+    let popup = document.getElementById("popUpWindow");
     popup.classList.remove("show");
 }
 

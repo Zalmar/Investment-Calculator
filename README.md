@@ -1,1 +1,1 @@
-## My test task for ANMEDIO
+## My test task
